@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView
-from .models import Servico, Funcionario
+from .models import Servico, Funcionario, Funcoes
 
 class IndexView(TemplateView):
     template_name = 'index.html'
@@ -8,4 +8,6 @@ class IndexView(TemplateView):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['servicos'] = Servico.objects.all()
         context['funcionarios'] = Funcionario.objects.all()
+        context['funcoes'] = Funcoes.objects.all()
+
         return context
