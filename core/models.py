@@ -70,4 +70,4 @@ class Funcoes(Base):
         verbose_name_plural = 'Funções'
 
     def __str__(self):
-        return self.nome
+        return self.titulo
